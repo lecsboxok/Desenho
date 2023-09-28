@@ -1,5 +1,5 @@
 let canvas = document.getElementById("canvas"); // Pega o ID canvas no HTML
-let contexto = canvas.getContext("2d"); // Pegamos o contexto do desenho, esse é o metódo que retorna o tipo da "animação", usar o paramêtro "2d" significa que o objeto que será reproduzido será bidimensional
+let contexto = canvas.getContext("2d"); // Pegamos o contexto do desenho, esse é o método que retorna o tipo da "animação", usar o paramêtro "2d" significa que o objeto que será reproduzido será bidimensional
 let desenhando = false; // variável que vai indentificar se estamos desenhando
 let corSelecionada = "#000000";
 const seletorDeCores = document.getElementById("seletorDeCores");
@@ -30,10 +30,10 @@ botaoBorracha.addEventListener("click", function () {
 
 
 canvas.addEventListener("mousedown", function(event){
-    //vamos usar o metódo addEventListener para ouvir nosso mouse, ele irá indentificar quando clicarmos
+    //vamos usar o método addEventListener para ouvir nosso mouse, ele irá indentificar quando clicarmos
     desenhando = true; // desenho se torna verdade
     contexto.beginPath(); //a variável contexto junto com o metódo beginPath() indica que algo novo será criado
-    contexto.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop); //nesse metódo, vamos dixer como o contexto irá funcionar,o clientX vai fornecer as coordenadas horizontais do mouse e o offsetLeft irá converter esse valor em pixel (px), a mesma coisa acontece comclientY na vertical.
+    contexto.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop); //nesse método, vamos dixer como o contexto irá funcionar,o clientX vai fornecer as coordenadas horizontais do mouse e o offsetLeft irá converter esse valor em pixel (px), a mesma coisa acontece comclientY na vertical.
 })
 
 canvas.addEventListener("mousemove", function(event){
